@@ -6,6 +6,9 @@ import Book from "../components/Book";
 import BookInfo from "../components/BookInfo";
 import Oder from "../components/Order";
 import Error from "../components/Error";
+import Register from "../components/Register";
+import Login from "../components/Login";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -28,12 +31,20 @@ export const router = createBrowserRouter([
     },
     {
       path:'book/:bookId',
-      element:<BookInfo></BookInfo>,
+      element: <PrivateRoute><BookInfo></BookInfo></PrivateRoute>,
       loader:({ params }) => fetch(`https://api.itbook.store/1.0/books/${params.bookId}`)
     },
     {
       path:'order',
       element:<Oder></Oder>
+    },
+    {
+      path:'register',
+      element:<Register></Register>
+    },
+    {
+      path:'login',
+      element:<Login></Login>
     }
   ]
   },

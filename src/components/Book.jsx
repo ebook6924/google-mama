@@ -4,11 +4,12 @@ import { useState } from "react";
 import Spiner from "./Spiner";
 
 
+
 const Book = () => {
   const [openData,setOpendata] = useState(false)
   const book = useLoaderData()
-  console.log(book.books)
-
+ // console.log(book.books)
+ 
  const navigation = useNavigation()
  // console.log(navigation.state)
   if (navigation.state === 'loading') {
@@ -33,7 +34,7 @@ const handleClikData = ()=>{
     {!openData&&
      <button onClick={()=>handleClikData(true)} className="ml-[41%] btn btn-secondary mb-6 ">Secondary</button>
     }
-
+     
   </>
   );
 };
