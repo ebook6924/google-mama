@@ -156,7 +156,7 @@ const Header = () => {
 
                     {user ? (
                       <>
-                        <span className="bg-rose-300 rounded-sm px-2">{user.email}</span>
+                        <span className="bg-rose-300 rounded-sm px-2">{user.email} <br /></span>
                         <button className={({ isActive }) => (isActive ? "active" : "default")} onClick={handleLogout}>Logout</button>
                       </>
                     ) : (

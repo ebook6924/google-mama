@@ -36,7 +36,7 @@ const Register = () => {
         <div className="text-center ">
           <h1 className="text-4xl font-semibold">Register now!</h1>
         </div>
-        <div className="card  w-full max-w-sm bg-red-100">
+        <div className="card  w-96 max-w-sm  bg-red-100">
           <form onSubmit={handleRegister} className="card-body">
             <div className="form-control">
               <label className="label">
@@ -75,7 +75,7 @@ const Register = () => {
               <button className="btn btn-primary">Register</button>
             </div>
             <div className="flex items-center">
-              <Link className="text-indigo-500 text-center" to="/login">
+              <Link className="text-indigo-500 text-center ml-32" to="/login">
                 {" "}
                 <small>Login now ?</small>
               </Link>
